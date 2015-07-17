@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+int convertFahrToCels(int fahr){
+
+	int cels;
+
+	// Calculate celsius
+	cels = 5 * (fahr-32) / 9;
+
+	return cels;
+}
+
+
 int main(){
 
 	// Define variable names
@@ -20,7 +31,7 @@ int main(){
 	while (fahr <= upper ){
 
 		// Calculate celsius
-		cels = 5 * (fahr-32) / 9;
+		cels = convertFahrToCels(fahr);
 
 		// Print 
 		printf("%3.0f\t%.1f\n", fahr, cels);
